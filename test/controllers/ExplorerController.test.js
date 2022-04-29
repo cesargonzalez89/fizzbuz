@@ -25,4 +25,24 @@ describe("Test para ExplorerController", () => {
         const explorersInJava = ExplorerController.getExplorersAmonutByMission("java");
         expect(explorersInJava).toBe(5);
     });
+
+    test("Prueba 6: se usa score: 1", () => {
+        const explorer1Validate = ExplorerController.applyValidationInNumber(1);
+        expect(explorer1Validate).toBe(1);
+    });
+
+    test("Prueba 7: se usa score: 3", () => {
+        const explorer3Validate = ExplorerController.applyValidationInNumber(3);
+        expect(explorer3Validate).toBe("FIZZ");
+    });
+
+    test("Prueba 8: se usa score: 5", () => {
+        const explorer5Validate = ExplorerController.applyValidationInNumber(5);
+        expect(explorer5Validate).toBe("BUZZ");
+    });
+
+    test("Prueba 9: se usa score: 15", () => {
+        const explorer15Validate = ExplorerController.applyValidationInNumber(15);
+        expect(explorer15Validate).toBe("FIZZBUZZ");
+    });
 });
