@@ -6,5 +6,3 @@ describe("Test para ExplorerService", () => {
         expect(explorersRead.length).toBe(15);
     });
 });
-
-
