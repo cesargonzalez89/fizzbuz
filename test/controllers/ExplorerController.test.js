@@ -46,13 +46,13 @@ describe("Test para ExplorerController", () => {
         expect(explorer15Validate).toBe("FIZZBUZZ");
     });
 
-    test("Requerimiento 5: Obtener los nombres de los explorers de una mision especifica", () => {
-        const explorersInNode = ExplorerService.getExplorersNamesByMission("node");
+    test("Requerimiento 10: Obtener los nombres de los explorers de una mision especifica", () => {
+        const explorersInNode = ExplorerController.getExplorersNamesByMission("node");
         expect(explorersInNode).toStrictEqual(["Woopa1", "Woopa2", "Woopa3", "Woopa4", "Woopa5", "Woopa11", "Woopa12", "Woopa13", "Woopa14", "Woopa15"]);
     });
 
-    test("Requerimiento 6: Obtener una sola cadena con los nombres de los explorers de una mision especifica", () => {
-        const explorersInNode = ExplorerService.getExplorersNamesByMissionInChain("node");
+    test("Requerimiento 11: Obtener una sola cadena con los nombres de los explorers de una mision especifica", () => {
+        const explorersInNode = ExplorerController.getExplorersNamesByMissionInChain("node");
         expect(explorersInNode).toBe("Woopa1, Woopa2, Woopa3, Woopa4, Woopa5, Woopa11, Woopa12, Woopa13, Woopa14, Woopa15");
     });
 });
