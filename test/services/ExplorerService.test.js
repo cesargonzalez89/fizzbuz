@@ -30,4 +30,10 @@ describe("Test para ExplorerService", () => {
         const explorersInNode = ExplorerService.getExplorersNamesByMission(explorers, "node");
         expect(explorersInNode).toStrictEqual(["Woopa1", "Woopa3"]);
     });
+
+    test("Requerimiento 6: Obtener una sola cadena con los nombres de los explorers de una mision especifica", () => {
+        const explorers = [{mission: "node", githubUsername: "ajolonauta1", name: "Woopa1"}, {mission: "java", githubUsername: "ajolonauta2", name: "Woopa2"}, {mission: "node", githubUsername: "ajolonauta3", name: "Woopa3"}];
+        const explorersInNode = ExplorerService.getExplorersNamesByMissionInChain(explorers, "node");
+        expect(explorersInNode).toBe("Woopa1, Woopa3");
+    });
 });
